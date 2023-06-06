@@ -27,28 +27,31 @@
                 </div>
             </nav>
         </header>
-        <div class="animated-typing">
-            <p id="introduction">Hello, my name is Carl Conste!</p>
-            <script>
-                const textElement = document.getElementById('introduction');
-                const text = textElement.textContent.trim();
-                textElement.textContent = ''
-                let index = 0;
-    
-                function type() {
-                    if (index < text.length) {
-                        textElement.textContent += text.charAt(index);
-                        index++;
-                        if (index === text.length) {
-                        textElement.style.animation = 'none';
+        <section class="introduction">
+            <div class="animated-typing">
+                <p id="name">Hello, my name is Carl Conste!</p>
+                <script>
+                    const textElement = document.getElementById('name');
+                    const text = textElement.textContent.trim();
+                    textElement.textContent = ''
+                    let index = 0;
+        
+                    function type() {
+                        if (index < text.length) {
+                            textElement.textContent += text.charAt(index);
+                            index++;
+                            if (index === text.length) {
+                            textElement.style.animation = 'none';
+                            }
+                            setTimeout(type, 150);
                         }
-                        setTimeout(type, 150);
                     }
-                }
-    
-                type();
-            </script>
-        </div>
+        
+                    type();
+                </script>
+            </div>
+            <p class="construction-message"">This section is under construction and will be finished soon!</p>
+        </section>
     </body>
     <footer>
         <p>Carl Conste | 2023</p>
