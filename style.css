@@ -18,16 +18,16 @@ ul {
     padding-inline-start: 0px;
 }
 
-.nav-bar-left {
+.nav-bar-right {
     font-family: 'Courier New', Courier, monospace;
-    text-align: left;
-    padding-left: 10%;
+    text-align: right;
+    padding-right: 10%;
     font-size: 20px;
 }
 
-.nav-bar-right {
-    text-align: right;
-    padding-right: 10%;
+.nav-bar-left {
+    text-align: left;
+    padding-left: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
