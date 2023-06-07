@@ -1,8 +1,8 @@
 body {
     margin: 0px;
     padding: 0;
-    padding-top: calc(100vh - 92vh); /* Adjust the height of the navigation bar */
-  box-sizing: border-box;
+    padding-top: calc(100vh - 92vh);
+    box-sizing: border-box;
 }
 
 nav {
@@ -15,6 +15,7 @@ nav {
     left: 0;
     margin: 0;
     height: 8%;
+    opacity: 95%;
 }
 
 ul {
@@ -26,6 +27,72 @@ ul {
     text-align: right;
     padding-right: 8%;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-mobile .line {
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-mobile:hover .line {
+    background-color: #ffffff;
+}
+
+.dropdown-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #bbbcca;
+    padding-right: 20px;
+    
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes revealAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.dropdown-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-nav ul li {
+    margin-bottom: 5px;
+    padding-right: 8%;
+}
+
+.dropdown-nav ul li a {
+    color: #000;
+    text-decoration: none;
+
+}
+
+.dropdown-nav ul li a:hover {
+    color: #fff;
 }
 
 .nav-bar-left {
@@ -116,10 +183,14 @@ footer {
     text-align: center;
 }
 
-
 @media (max-width: 768px) {
     body{
         font-size: 14px;
+        padding-top: calc(100vh - 94vh);
+    }
+
+    nav {
+        height: 6%;
     }
     
     .contact-icons {
@@ -132,8 +203,28 @@ footer {
     .construction-message{
         font-size: 20px;
     }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .nav-website {
+        display: none;
+    }
+
+    .nav-website.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-nav.open {
+        display: block;
+        animation: revealAnimation 0.3s forwards;
+        visibility: visible;
+    }
     
-    footer{
+    footer {
         font-size: 9px;
     }
 }

@@ -20,11 +20,23 @@
                     </a>
                 </div>
                 <div class="nav-bar-right">
-                    <ul>
+                    <ul class="nav-website">
                         <li class="nav-item-active"><a href="index.html">HOME</a></li>
                         <li class="nav-item"><a href="projects.html">PROJECTS</a></li>
                         <li class="nav-item"><a href="about_me.html">ABOUT ME</a></li>
                     </ul>
+                    <div class="nav-mobile">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="dropdown-nav closed">
+                        <ul>
+                          <li><a href="index.html">HOME</a></li>
+                          <li><a href="projects.html">PROJECTS</a></li>
+                          <li><a href="about_me.html">ABOUT ME</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -32,29 +44,59 @@
             <div class="container">
                 <div class="animated-typing">
                     <p id="name">Hello, my name is Carl Conste!</p>
-                    <script>
-                        const textElement = document.getElementById('name');
-                        const text = textElement.textContent.trim();
-                        textElement.textContent = ''
-                        let index = 0;
-            
-                        function type() {
-                            if (index < text.length) {
-                                textElement.textContent += text.charAt(index);
-                                index++;
-                                if (index === text.length) {
-                                textElement.style.animation = 'none';
-                                }
-                                setTimeout(type, 150);
-                            }
-                        }
-            
-                        type();
-                    </script>
                 </div>
                 <p class="construction-message"">This section is under construction and will be finished soon!</p>
             </div>
         </section>
+        <script>
+            const textElement = document.getElementById('name');
+            const text = textElement.textContent.trim();
+            textElement.textContent = ''
+            let index = 0;
+
+            function type() {
+                if (index < text.length) {
+                    textElement.textContent += text.charAt(index);
+                    index++;
+                    if (index === text.length) {
+                    textElement.style.animation = 'none';
+                    }
+                    setTimeout(type, 150);
+                }
+            }
+
+            type();
+        </script>
+        <script>
+            const navMobile = document.querySelector('.nav-mobile');
+            const navWebsite = document.querySelector('.nav-website');
+
+            navMobile.addEventListener('click', function() {
+                navWebsite.classList.toggle('open');
+            }); 
+        </script>
+        <script>
+            const dropdownNav = document.querySelector('.dropdown-nav');
+
+            navMobile.addEventListener('click', function() {
+            navWebsite.classList.toggle('open');
+            if (dropdownNav.classList.contains('closed')) {
+                dropdownNav.classList.remove('closed');
+                dropdownNav.classList.add('open');
+            } else {
+                dropdownNav.classList.remove('open');
+                dropdownNav.classList.add('closed');
+            }
+            });
+        </script>
+        <script>
+            function toggleDropdown() {
+                const dropdownNav = document.querySelector('.dropdown-nav');
+
+
+                
+            }
+        </script>
     </body>
     <footer>
         <p>Carl Conste | 2023</p>
