@@ -23,35 +23,37 @@
                     <ul>
                         <li class="nav-item-active"><a href="index.html">HOME</a></li>
                         <li class="nav-item"><a href="projects.html">PROJECTS</a></li>
-                        <li class="nav-item"><a href="about_me.html">MORE ABOUT ME</a></li>
+                        <li class="nav-item"><a href="about_me.html">ABOUT ME</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <section class="introduction">
-            <div class="animated-typing">
-                <p id="name">Hello, my name is Carl Conste!</p>
-                <script>
-                    const textElement = document.getElementById('name');
-                    const text = textElement.textContent.trim();
-                    textElement.textContent = ''
-                    let index = 0;
-        
-                    function type() {
-                        if (index < text.length) {
-                            textElement.textContent += text.charAt(index);
-                            index++;
-                            if (index === text.length) {
-                            textElement.style.animation = 'none';
+            <div class="container">
+                <div class="animated-typing">
+                    <p id="name">Hello, my name is Carl Conste!</p>
+                    <script>
+                        const textElement = document.getElementById('name');
+                        const text = textElement.textContent.trim();
+                        textElement.textContent = ''
+                        let index = 0;
+            
+                        function type() {
+                            if (index < text.length) {
+                                textElement.textContent += text.charAt(index);
+                                index++;
+                                if (index === text.length) {
+                                textElement.style.animation = 'none';
+                                }
+                                setTimeout(type, 150);
                             }
-                            setTimeout(type, 150);
                         }
-                    }
-        
-                    type();
-                </script>
+            
+                        type();
+                    </script>
+                </div>
+                <p class="construction-message"">This section is under construction and will be finished soon!</p>
             </div>
-            <p class="construction-message"">This section is under construction and will be finished soon!</p>
         </section>
     </body>
     <footer>
