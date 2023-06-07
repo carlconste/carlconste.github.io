@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-    background-color: #bbbcca;
+    background-color: #e7dccb;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -56,7 +56,7 @@ ul {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #bbbcca;
+    background-color: #e7dccb;
     padding-right: 20px;
 }
 
@@ -96,7 +96,6 @@ ul {
 .dropdown-nav ul li a {
     color: #000;
     text-decoration: none;
-
 }
 
 .dropdown-nav ul li a:hover {
@@ -155,33 +154,58 @@ ul {
     }
 }
 
-.animated-typing {
+#name {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 330%;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-}
-
-#name {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 250%;
-    text-align: center;
-    margin-bottom: 0px;
-    margin-top: 2%;
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin: 0px;
 }
 
 .construction-message {
     font-family: 'Courier New', Courier, monospace;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-size: 30px;
+    margin: 20px;
+}
+
+.container {
+    padding-left: 8%;
+    padding-right: 8%
+}
+
+.blurb {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.subheadings {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 250%;
+}
+
+.subsections {
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .contact-icons {
     width: 25px;
     height: 25px;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 footer {
@@ -206,6 +230,7 @@ footer {
         height: 20px;
         margin-right: 8px;
         margin-left: 8px;
+
     }
 
     .construction-message{
@@ -236,7 +261,15 @@ footer {
         display: block;
         animation: hideAnimation 0.2s forwards;
         visibility: visible;
-      }
+    }
+
+    #name {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 8%;
+        padding-right: 8%;
+        font-size: 280%;
+    }
     
     footer {
         font-size: 9px;
